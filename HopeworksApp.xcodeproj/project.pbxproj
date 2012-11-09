@@ -25,20 +25,8 @@
 		85874616164DB14300020A58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85874614164DB14300020A58 /* InfoPlist.strings */; };
 		85874618164DB14300020A58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85874617164DB14300020A58 /* main.m */; };
 		8587461A164DB14300020A58 /* HopeworksApp-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 85874619164DB14300020A58 /* HopeworksApp-Prefix.pch */; };
-		85874636164DB14500020A58 /* SFTestRunnerPlugin.js in Resources */ = {isa = PBXBuildFile; fileRef = 85874635164DB14500020A58 /* SFTestRunnerPlugin.js */; };
 		85874638164DB14600020A58 /* SalesforceHybridSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85874637164DB14600020A58 /* SalesforceHybridSDK.framework */; };
 		8587463A164DB14700020A58 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 85874639164DB14700020A58 /* libz.dylib */; };
-		8587463E164DB14700020A58 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 8587463D164DB14700020A58 /* icon-72.png */; };
-		85874640164DB14700020A58 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8587463F164DB14700020A58 /* icon-72@2x.png */; };
-		85874642164DB14700020A58 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874641164DB14700020A58 /* icon.png */; };
-		85874644164DB14700020A58 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874643164DB14700020A58 /* icon@2x.png */; };
-		85874647164DB14700020A58 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874646164DB14700020A58 /* Default-Landscape~ipad.png */; };
-		85874649164DB14700020A58 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874648164DB14700020A58 /* Default-Landscape@2x~ipad.png */; };
-		8587464B164DB14700020A58 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8587464A164DB14700020A58 /* Default-Portrait~ipad.png */; };
-		8587464D164DB14700020A58 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 8587464C164DB14700020A58 /* Default-Portrait@2x~ipad.png */; };
-		8587464F164DB14700020A58 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8587464E164DB14700020A58 /* Default.png */; };
-		85874651164DB14700020A58 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874650164DB14700020A58 /* Default@2x.png */; };
-		85874653164DB14700020A58 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874652164DB14700020A58 /* Default-568h@2x.png */; };
 		85874655164DB14700020A58 /* Default~iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 85874654164DB14700020A58 /* Default~iPad.png */; };
 		85874657164DB14700020A58 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 85874656164DB14700020A58 /* readme.md */; };
 		8587465B164DB14700020A58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8587465A164DB14700020A58 /* AppDelegate.m */; };
@@ -46,6 +34,7 @@
 		85874660164DB14700020A58 /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8587465F164DB14700020A58 /* Cordova.plist */; };
 		85874662164DB14700020A58 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85874661164DB14700020A58 /* Settings.bundle */; };
 		85874664164DB14700020A58 /* CordovaResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 85874663164DB14700020A58 /* CordovaResources.bundle */; };
+		8587466B164DB18400020A58 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 8587466A164DB18400020A58 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -81,30 +70,6 @@
 		85874615164DB14300020A58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85874617164DB14300020A58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85874619164DB14300020A58 /* HopeworksApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopeworksApp-Prefix.pch"; sourceTree = "<group>"; };
-		8587461C164DB14500020A58 /* bootconfig.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = bootconfig.js; sourceTree = "<group>"; };
-		8587461D164DB14500020A58 /* bootstrap.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = bootstrap.html; sourceTree = "<group>"; };
-		8587461E164DB14500020A58 /* cordova-1.8.1.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "cordova-1.8.1.js"; sourceTree = "<group>"; };
-		8587461F164DB14500020A58 /* forcetk.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = forcetk.js; sourceTree = "<group>"; };
-		85874620164DB14500020A58 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		85874621164DB14500020A58 /* inline.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = inline.js; sourceTree = "<group>"; };
-		85874624164DB14500020A58 /* ajax-loader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ajax-loader.png"; sourceTree = "<group>"; };
-		85874625164DB14500020A58 /* icon-search-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-search-black.png"; sourceTree = "<group>"; };
-		85874626164DB14500020A58 /* icons-18-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons-18-black.png"; sourceTree = "<group>"; };
-		85874627164DB14500020A58 /* icons-18-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons-18-white.png"; sourceTree = "<group>"; };
-		85874628164DB14500020A58 /* icons-36-black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons-36-black.png"; sourceTree = "<group>"; };
-		85874629164DB14500020A58 /* icons-36-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons-36-white.png"; sourceTree = "<group>"; };
-		8587462A164DB14500020A58 /* jquery-1.6.2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.2.js"; sourceTree = "<group>"; };
-		8587462B164DB14500020A58 /* jquery-1.6.2.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery-1.6.2.min.js"; sourceTree = "<group>"; };
-		8587462C164DB14500020A58 /* jquery.mobile-1.0b2.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "jquery.mobile-1.0b2.css"; sourceTree = "<group>"; };
-		8587462D164DB14500020A58 /* jquery.mobile-1.0b2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.0b2.js"; sourceTree = "<group>"; };
-		8587462E164DB14500020A58 /* jquery.mobile-1.0b2.min.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = "jquery.mobile-1.0b2.min.css"; sourceTree = "<group>"; };
-		8587462F164DB14500020A58 /* jquery.mobile-1.0b2.min.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.0b2.min.js"; sourceTree = "<group>"; };
-		85874630164DB14500020A58 /* qunit.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = qunit.css; sourceTree = "<group>"; };
-		85874631164DB14500020A58 /* qunit.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = qunit.js; sourceTree = "<group>"; };
-		85874632164DB14500020A58 /* SalesforceOAuthPlugin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = SalesforceOAuthPlugin.js; sourceTree = "<group>"; };
-		85874633164DB14500020A58 /* SFHybridApp.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = SFHybridApp.js; sourceTree = "<group>"; };
-		85874634164DB14500020A58 /* SFSmartStorePlugin.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = SFSmartStorePlugin.js; sourceTree = "<group>"; };
-		85874635164DB14500020A58 /* SFTestRunnerPlugin.js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SFTestRunnerPlugin.js; sourceTree = "<group>"; };
 		85874637164DB14600020A58 /* SalesforceHybridSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SalesforceHybridSDK.framework; sourceTree = "<group>"; };
 		85874639164DB14700020A58 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		8587463D164DB14700020A58 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Resources/icons/icon-72.png"; sourceTree = "<group>"; };
@@ -126,6 +91,7 @@
 		8587465F164DB14700020A58 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
 		85874661164DB14700020A58 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		85874663164DB14700020A58 /* CordovaResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CordovaResources.bundle; sourceTree = "<group>"; };
+		8587466A164DB18400020A58 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,12 +164,12 @@
 		85874611164DB14300020A58 /* HopeworksApp */ = {
 			isa = PBXGroup;
 			children = (
+				8587466A164DB18400020A58 /* www */,
 				85874637164DB14600020A58 /* SalesforceHybridSDK.framework */,
 				85874639164DB14700020A58 /* libz.dylib */,
 				85874656164DB14700020A58 /* readme.md */,
 				85874661164DB14700020A58 /* Settings.bundle */,
 				85874663164DB14700020A58 /* CordovaResources.bundle */,
-				8587461B164DB14500020A58 /* www */,
 				8587463B164DB14700020A58 /* Resources */,
 				85874658164DB14700020A58 /* Classes */,
 				8587465C164DB14700020A58 /* Plugins */,
@@ -222,53 +188,6 @@
 				8587465F164DB14700020A58 /* Cordova.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8587461B164DB14500020A58 /* www */ = {
-			isa = PBXGroup;
-			children = (
-				8587461C164DB14500020A58 /* bootconfig.js */,
-				8587461D164DB14500020A58 /* bootstrap.html */,
-				8587461E164DB14500020A58 /* cordova-1.8.1.js */,
-				8587461F164DB14500020A58 /* forcetk.js */,
-				85874620164DB14500020A58 /* index.html */,
-				85874621164DB14500020A58 /* inline.js */,
-				85874622164DB14500020A58 /* jquery */,
-				85874630164DB14500020A58 /* qunit.css */,
-				85874631164DB14500020A58 /* qunit.js */,
-				85874632164DB14500020A58 /* SalesforceOAuthPlugin.js */,
-				85874633164DB14500020A58 /* SFHybridApp.js */,
-				85874634164DB14500020A58 /* SFSmartStorePlugin.js */,
-				85874635164DB14500020A58 /* SFTestRunnerPlugin.js */,
-			);
-			path = www;
-			sourceTree = "<group>";
-		};
-		85874622164DB14500020A58 /* jquery */ = {
-			isa = PBXGroup;
-			children = (
-				85874623164DB14500020A58 /* images */,
-				8587462A164DB14500020A58 /* jquery-1.6.2.js */,
-				8587462B164DB14500020A58 /* jquery-1.6.2.min.js */,
-				8587462C164DB14500020A58 /* jquery.mobile-1.0b2.css */,
-				8587462D164DB14500020A58 /* jquery.mobile-1.0b2.js */,
-				8587462E164DB14500020A58 /* jquery.mobile-1.0b2.min.css */,
-				8587462F164DB14500020A58 /* jquery.mobile-1.0b2.min.js */,
-			);
-			path = jquery;
-			sourceTree = "<group>";
-		};
-		85874623164DB14500020A58 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				85874624164DB14500020A58 /* ajax-loader.png */,
-				85874625164DB14500020A58 /* icon-search-black.png */,
-				85874626164DB14500020A58 /* icons-18-black.png */,
-				85874627164DB14500020A58 /* icons-18-white.png */,
-				85874628164DB14500020A58 /* icons-36-black.png */,
-				85874629164DB14500020A58 /* icons-36-white.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		8587463B164DB14700020A58 /* Resources */ = {
@@ -378,24 +297,13 @@
 			files = (
 				85874616164DB14300020A58 /* InfoPlist.strings in Resources */,
 				8587461A164DB14300020A58 /* HopeworksApp-Prefix.pch in Resources */,
-				85874636164DB14500020A58 /* SFTestRunnerPlugin.js in Resources */,
-				8587463E164DB14700020A58 /* icon-72.png in Resources */,
-				85874640164DB14700020A58 /* icon-72@2x.png in Resources */,
-				85874642164DB14700020A58 /* icon.png in Resources */,
-				85874644164DB14700020A58 /* icon@2x.png in Resources */,
-				85874647164DB14700020A58 /* Default-Landscape~ipad.png in Resources */,
-				85874649164DB14700020A58 /* Default-Landscape@2x~ipad.png in Resources */,
-				8587464B164DB14700020A58 /* Default-Portrait~ipad.png in Resources */,
-				8587464D164DB14700020A58 /* Default-Portrait@2x~ipad.png in Resources */,
-				8587464F164DB14700020A58 /* Default.png in Resources */,
-				85874651164DB14700020A58 /* Default@2x.png in Resources */,
-				85874653164DB14700020A58 /* Default-568h@2x.png in Resources */,
 				85874655164DB14700020A58 /* Default~iPad.png in Resources */,
 				85874657164DB14700020A58 /* readme.md in Resources */,
 				8587465E164DB14700020A58 /* README in Resources */,
 				85874660164DB14700020A58 /* Cordova.plist in Resources */,
 				85874662164DB14700020A58 /* Settings.bundle in Resources */,
 				85874664164DB14700020A58 /* CordovaResources.bundle in Resources */,
+				8587466B164DB18400020A58 /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
