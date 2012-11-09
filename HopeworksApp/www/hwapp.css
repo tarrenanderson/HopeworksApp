@@ -1,0 +1,47 @@
+/** Custom CSS for HopeworksApp */
+#app-home
+{
+    background:#000000;
+}
+
+#sflogo
+{
+    width:50%;
+    float:left;
+}
+
+#hwlogo
+{
+    width:50%;
+    float:left;
+}
+
+#hwlogo img, #sflogo img
+{
+    width:100%;
+}
+
+#addContact, #listContact, #listTask, #contactButton
+{
+    float:left;
+    width:40%;
+    height:30%;
+    margin: 2% 5%;
+}
+
+#appbuttons
+{
+    margin:165px auto 0;
+    text-align:center;
+    width:100%
+}
+
+#apphead
+{
+    height:30%;
+}
+
+#addContact img, #listContact img, #listTask img, #contactButton img
+{
+    width:100%;
+}
