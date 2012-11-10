@@ -3,39 +3,12 @@
 function regLinkClickHandlers() {
     var $j = jQuery.noConflict();
     var logToConsole = cordova.require("salesforce/util/logger").logToConsole;
-    $j('#link_fetch_device_contacts').click(function() {
-                                           logToConsole("link_fetch_device_contacts clicked");
-                                           var options = cordova.require("cordova/plugin/ContactFindOptions");
-                                           options.filter = ""; // empty search string returns all contacts
-                                           options.multiple = true;
-                                           var fields = ["name"];
-                                           var contactsObj = cordova.require("cordova/plugin/contacts");
-                                           contactsObj.find(fields, onSuccessDevice, onErrorDevice, options);
+    $j('#link_add_contact').click(function() {
+                                            $j.mobile.changePage('#addContactPage',{changeHash: true});
                                            });
-    
-    $j('#link_fetch_sfdc_contacts').click(function() {
-                                         logToConsole("link_fetch_sfdc_contacts clicked");
-                                         forcetkClient.query("SELECT Name FROM Contact", onSuccessSfdcContacts, onErrorSfdc); 
-                                         });
-    
-    $j('#link_fetch_sfdc_accounts').click(function() {
-                                         logToConsole("link_fetch_sfdc_accounts clicked");
-                                         forcetkClient.query("SELECT Name FROM Account", onSuccessSfdcAccounts, onErrorSfdc); 
-                                         });
-    
-    $j('#link_reset').click(function() {
-                           logToConsole("link_reset clicked");
-                           $j("#div_device_contact_list").html("")
-                           $j("#div_sfdc_contact_list").html("")
-                           $j("#div_sfdc_account_list").html("")
-                           $j("#console").html("")
-                           });
-                           
-    $j('#link_logout').click(function() {
-             logToConsole("link_logout clicked");
-             var sfOAuthPlugin = cordova.require("salesforce/plugin/oauth");
-             sfOAuthPlugin.logout();
-             });
+    $j('#returnToHome').click(function(){
+                              $j.mobile.changePage('#app-home', {changeHash: true});
+                              });
 }
 
 function onSuccessDevice(contacts) {
@@ -62,6 +35,15 @@ function onErrorDevice(error) {
     alert('Error getting device contacts!');
 }
 
+
+function onErrorSfdc(error) {
+    cordova.require("salesforce/util/logger").logToConsole("onErrorSfdc: " + JSON.stringify(error));
+    alert('Error getting sfdc contacts!');
+}
+
+// OLD CODE
+
+/*
 function onSuccessSfdcContacts(response) {
     var $j = jQuery.noConflict();
     cordova.require("salesforce/util/logger").logToConsole("onSuccessSfdcContacts: received " + response.totalSize + " contacts");
@@ -72,9 +54,9 @@ function onSuccessSfdcContacts(response) {
     
     ul.append($j('<li data-role="list-divider">Salesforce Contacts: ' + response.totalSize + '</li>'));
     $j.each(response.records, function(i, contact) {
-           var newLi = $j("<li><a href='#'>" + (i+1) + " - " + contact.Name + "</a></li>");
-           ul.append(newLi);
-           });
+            var newLi = $j("<li><a href='#'>" + (i+1) + " - " + contact.Name + "</a></li>");
+            ul.append(newLi);
+            });
     
     $j("#div_sfdc_contact_list").trigger( "create" )
 }
@@ -89,14 +71,11 @@ function onSuccessSfdcAccounts(response) {
     
     ul.append($j('<li data-role="list-divider">Salesforce Accounts: ' + response.totalSize + '</li>'));
     $j.each(response.records, function(i, record) {
-           var newLi = $j("<li><a href='#'>" + (i+1) + " - " + record.Name + "</a></li>");
-           ul.append(newLi);
-           });
+            var newLi = $j("<li><a href='#'>" + (i+1) + " - " + record.Name + "</a></li>");
+            ul.append(newLi);
+            });
     
     $j("#div_sfdc_account_list").trigger( "create" )
 }
-
-function onErrorSfdc(error) {
-    cordova.require("salesforce/util/logger").logToConsole("onErrorSfdc: " + JSON.stringify(error));
-    alert('Error getting sfdc contacts!');
-}
+ 
+ */

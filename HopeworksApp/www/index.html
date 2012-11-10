@@ -7,6 +7,7 @@
     <!-- include jquery mobile -->
     <link rel="stylesheet" href="jquery/jquery.mobile-1.0b2.min.css" />
     <link rel="stylesheet" href="hwapp.css" />
+    <link rel="stylesheet" href="jquery/themes/hwapp.css" />
     <script src="jquery/jquery-1.6.2.min.js"></script>
     <script src="jquery/jquery.mobile-1.0b2.min.js"></script>
         
@@ -109,11 +110,18 @@
               <div id="sflogo"><img src="components/sflogo.jpg" /></div>
           </div><!-- apphead -->
           <div id="appbuttons">
-              <div id="addContact"><img src="components/adduser_button.jpg" /></div>
+              <div id="addContact"><a href="#" id="link_add_contact"><img src="components/adduser_button.jpg" /></a></div>
               <div id="listContact"><img src="components/listuser_button.jpg" /></div>
               <div id="listTask"><img src="components/task_button.jpg" /></div>
               <div id="contactButton"><img src="components/contact_button.jpg" /></div>
           </div><!-- appbuttons -->
-      </div> 
+      </div>
+      <!-- END OF HOME PAGE -->
+      <div data-role="page" data-theme="a" id="addContactPage">
+          <div class="ui-bar-a" style="height:50px;">
+              <div style="width:40%; height:15px;" class="ui-block-a"><a href="#" id="returnToHome" data-role="button" data-icon="home">Home</a></div>
+              <div sytle="width:50%;" class="ui-block-b"><h2>Add Contact</h2></div>
+          </div>
+      </div>
   </body>
 </html>
