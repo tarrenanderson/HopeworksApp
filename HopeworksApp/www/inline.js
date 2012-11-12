@@ -9,6 +9,14 @@ function regLinkClickHandlers() {
     $j('#returnToHome').click(function(){
                               $j.mobile.changePage('#app-home', {changeHash: true});
                               });
+    $j('#link_test_user').click(function(){
+                                var userName = $j('#inputUser').val();
+                                var userEmail = $j('#inputEmail').val();
+                                var userAlias = userName.substring(0,8);
+                                forcetkClient.create("user",{"LastName": userName, "Alias": userAlias, "Email": userEmail, "Username": userEmail, "CommunityNickname": userName, "EmailEncodingKey": "ISO-8859-1", "TimeZoneSidKey": "America/New_York", "LocaleSidKey": "en_US", "ProfileId": "00eG00000016MBF", "LanguageLocaleKey": "en_US"}, function(result){
+                                            onSuccessUser(result["id"], userName)
+                                                          }, onErrorSfdc);
+                                });
 }
 
 function onSuccessDevice(contacts) {
@@ -30,6 +38,11 @@ function onSuccessDevice(contacts) {
     $j("#div_device_contact_list").trigger( "create" )
 }
 
+function onSuccessUser(user, userName)
+{
+    forcetkClient.create("tdev__Trainee_Summary_Record__c", {"Name": userName, "tdev__User__c": user["id"]}, function(){alert("User Created Successfully");}, onErrorSfdc);
+}
+
 function onErrorDevice(error) {
     cordova.require("salesforce/util/logger").logToConsole("onErrorDevice: " + JSON.stringify(error) );
     alert('Error getting device contacts!');
@@ -38,7 +51,7 @@ function onErrorDevice(error) {
 
 function onErrorSfdc(error) {
     cordova.require("salesforce/util/logger").logToConsole("onErrorSfdc: " + JSON.stringify(error));
-    alert('Error getting sfdc contacts!');
+    alert(JSON.stringify(error));
 }
 
 // OLD CODE
