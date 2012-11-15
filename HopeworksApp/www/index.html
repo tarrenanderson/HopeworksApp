@@ -112,7 +112,7 @@
           </div><!-- apphead -->
           <div id="appbuttons">
               <div id="addContact"><a href="#" id="link_add_contact"><img src="components/adduser_button.jpg" /></a></div>
-              <div id="listContact"><img src="components/listuser_button.jpg" /></div>
+              <div id="listContact"><a href="#" id="link_list_trainee"><img src="components/listuser_button.jpg" /></a></div>
               <div id="listTask"><img src="components/task_button.jpg" /></div>
               <div id="contactButton"><img src="components/contact_button.jpg" /></div>
           </div><!-- appbuttons -->
@@ -120,7 +120,7 @@
       <!-- END OF HOME PAGE -->
       <div data-role="page" data-theme="a" id="addContactPage">
           <div class="ui-bar-a" style="height:70px;">
-              <div style="width:40%; height:15px;" class="ui-block-a"><a href="#" id="returnToHome" data-role="button" data-icon="home">Home</a></div>
+              <div style="width:40%; height:15px;" class="ui-block-a"><a href="#" data-direction="reverse" class="returnToHome" data-role="button" data-icon="home">Home</a></div>
               <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Add Contact</h2></div>
           </div>
           <div id="content" style="margin:0px 5px;">
@@ -130,6 +130,22 @@
               <input type="text" name="inputEmail" id="inputEmail" />
             <a href="#" id="link_test_user" data-role="button">Create User</a>
           </div>
-      </div>
+      </div><!-- END OF CREATION PAGE -->
+      <div data-role="page" data-theme="a" id="listTrainee">
+          <div class="ui-bar-a" style="height:70px;">
+              <div style="width:40%; height:15px;" class="ui-block-a"><a href="#" class="returnToHome" data-role="button" data-icon="home">Home</a></div>
+              <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Trainees</h2></div>
+          </div>
+           <div id="content">
+               <div id="traineelist"></div>
+           </div>
+      </div><!-- END OF TRAINEE LIST PAGE -->
+      <div data-role="page" data-theme="a" id="detailpage">
+          <div class="ui-bar-a" style="height:70px;">
+              <div style="width:40%; height:15px;" class="ui-block-a">
+                  <a href="#" data-direction="reverse" class="returnToHome" data-role="button" data-icon="arrow-l">Home</a></div>
+              <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Trainee Detail</h2></div>
+          </div>
+      </div><!-- END OF DETAIL PAGE -->
   </body>
 </html>
