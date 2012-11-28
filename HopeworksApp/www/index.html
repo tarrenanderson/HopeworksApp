@@ -56,6 +56,7 @@
     var forcetkClient;
     var debugMode = true;
     var logToConsole = cordova.require("salesforce/util/logger").logToConsole;
+    var currentUserId;
 
     jQuery(document).ready(function() {
         //Add event listeners and so forth here
@@ -91,6 +92,9 @@
         forcetkClient.setSessionToken(credsData.accessToken, apiVersion, credsData.instanceUrl);
         forcetkClient.setRefreshToken(credsData.refreshToken);
         forcetkClient.setUserAgentString(credsData.userAgent);
+        //alert(creds.userId);
+        //setUserId();
+        currentUserId = creds.userId;
     }
 
 
@@ -160,6 +164,7 @@
               <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Tasks</h2></div>
           </div>
           <div id="content" style="margin:0px 5px;">
+              <div id="tasklist"></div>
           </div>
       </div><!-- END OF TASK OVERVIEW -->
   </body>

@@ -10,9 +10,17 @@ function regLinkClickHandlers() {
                                    forcetkClient.query("SELECT Name, tdev__Hometown__c FROM tdev__Trainee_Summary_Record__c", onSuccessTrainees, onErrorSfdc);
                                    
                                    });
+    /*
     $j('#link_task_overview').click(function(){
                               $j.mobile.changePage('#taskOverview', {});
                               });
+     */
+    
+     
+    $j('#link_task_overview').click(function() {
+     forcetkClient.query("SELECT Subject from TASK where ownerid = '" + currentUserId + "'", onSuccessTasks, onErrorSfdc);
+                                    });
+
     
     $j('.returnToHome').click(function(){
                               $j.mobile.changePage('#app-home', {reverse:true});
@@ -53,6 +61,36 @@ function onSuccessTrainees(response) {
                             $j("#traineeHomeTown").val(record.tdev__Hometown__c);
                             $j.mobile.changePage('#detailpage', {changeHash: true});
                             });
+}
+
+function onSuccessTasks(response)
+{
+    var $j = jQuery.noConflict();
+    var taskArray = new Array();
+    $j.mobile.changePage('#taskOverview',{});
+    $j("#tasklist").html("")
+    var ul = $j('<ul data-role="listview" data-inset="true" data-theme="a" data-dividertheme="a"></ul>');
+    $j("#tasklist").append(ul);
+    
+    ul.append($j('<li data-role="list-divider">Tasks: ' + response.totalSize + '</li>'));
+    $j.each(response.records, function(i, task) {
+            taskArray[i] = task;
+            var newLi = $j("<li data-id='" + i + "' class='taskdetailLink'><a href='#'>" + (i+1) + " - " + task.Subject + "</a></li>");
+            ul.append(newLi);
+            });
+    
+    $j("#tasklist").trigger( "create" );
+}
+
+function setUserId()
+{
+    //alert("setting user id");
+    forcetkClient.query("SELECT Id, name from User limit 1", function (response){
+                        $j.each(response.records, function(i, user) {
+                                currentUserId = user.Id;
+                                alert(currentUserId);
+                                });
+    } , onErrorSfdc);
 }
 
 function onSuccessUser(user, userName)
