@@ -18,7 +18,7 @@ function regLinkClickHandlers() {
     
      
     $j('#link_task_overview').click(function() {
-     forcetkClient.query("SELECT Subject from TASK where ownerid = '" + currentUserId + "'", onSuccessTasks, onErrorSfdc);
+     forcetkClient.query("SELECT Subject, ActivityDate, Description from TASK where ownerid = '" + currentUserId + "'", onSuccessTasks, onErrorSfdc);
                                     });
 
     
@@ -27,6 +27,9 @@ function regLinkClickHandlers() {
                               });
     $j('.returnToList').click(function(){
                               $j.mobile.changePage('#listTrainee', {reverse:true});
+                              });
+    $j('.returnToTasks').click(function(){
+                              $j.mobile.changePage('#taskOverview', {reverse:true});
                               });
     $j('#link_test_user').click(function(){
                                 var userName = $j('#inputUser').val();
@@ -80,17 +83,14 @@ function onSuccessTasks(response)
             });
     
     $j("#tasklist").trigger( "create" );
-}
-
-function setUserId()
-{
-    //alert("setting user id");
-    forcetkClient.query("SELECT Id, name from User limit 1", function (response){
-                        $j.each(response.records, function(i, user) {
-                                currentUserId = user.Id;
-                                alert(currentUserId);
-                                });
-    } , onErrorSfdc);
+    $j(".taskdetailLink").click(function(){
+                            var id = $j(this).attr('data-id');
+                            var record = taskArray[id];
+                            $j("#taskName").val(record.Subject);
+                            $j("#taskDate").val(record.ActivityDate);
+                            $j("#taskDesc").val(record.Description);
+                            $j.mobile.changePage('#taskdetailPage', {});
+                            });
 }
 
 function onSuccessUser(user, userName)

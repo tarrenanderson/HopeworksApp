@@ -92,8 +92,7 @@
         forcetkClient.setSessionToken(credsData.accessToken, apiVersion, credsData.instanceUrl);
         forcetkClient.setRefreshToken(credsData.refreshToken);
         forcetkClient.setUserAgentString(credsData.userAgent);
-        //alert(creds.userId);
-        //setUserId();
+        //get the current user id
         currentUserId = creds.userId;
     }
 
@@ -165,6 +164,21 @@
           </div>
           <div id="content" style="margin:0px 5px;">
               <div id="tasklist"></div>
+          </div>
+      </div><!-- END OF TASK OVERVIEW -->
+      <div data-role="page" data-theme="a" id="taskdetailPage">
+          <div class="ui-bar-a" style="height:70px;">
+              <div style="width:40%; height:15px;" class="ui-block-a">
+                  <a href="#" data-direction="reverse" class="returnToTasks" data-role="button" data-icon="arrow-l">Tasks</a></div>
+              <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Task Detail</h2></div>
+          </div>
+          <div id="content" style="margin:0px 5px;">
+              <label for="taskName">Subject: </label>
+              <input type="text" id="taskName" style="border:none;" readonly></input>
+              <label for="taskDate">Due Date:</label>
+              <input type="text" id="taskDate" style="border:none;" readonly="readonly"></input>
+              <label for="taskName">Description: </label>
+              <input type="textarea" id="taskDesc" style="border:none; width:100%; font-size:16px;" readonly></input>
           </div>
       </div><!-- END OF TASK OVERVIEW -->
   </body>
