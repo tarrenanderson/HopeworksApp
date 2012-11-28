@@ -113,7 +113,7 @@
           <div id="appbuttons">
               <div id="addContact"><a href="#" id="link_add_contact"><img src="components/adduser_button.jpg" /></a></div>
               <div id="listContact"><a href="#" id="link_list_trainee"><img src="components/listuser_button.jpg" /></a></div>
-              <div id="listTask"><img src="components/task_button.jpg" /></div>
+              <div id="listTask"><a href="#" id="link_task_overview"><img src="components/task_button.jpg" /></a></div>
               <div id="contactButton"><img src="components/contact_button.jpg" /></div>
           </div><!-- appbuttons -->
       </div>
@@ -143,9 +143,24 @@
       <div data-role="page" data-theme="a" id="detailpage">
           <div class="ui-bar-a" style="height:70px;">
               <div style="width:40%; height:15px;" class="ui-block-a">
-                  <a href="#" data-direction="reverse" class="returnToHome" data-role="button" data-icon="arrow-l">Home</a></div>
+                  <a href="#" data-direction="reverse" class="returnToList" data-role="button" data-icon="arrow-l">Home</a></div>
               <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Trainee Detail</h2></div>
           </div>
+          <div id="content" style="margin:0px 5px;">
+              <label for="traineeName">Name: </label>
+            <input type="text" id="traineeName" style="border:none;" readonly></input>
+              <label for="traineeHomeTown">Hometown:</label>
+            <input type="text" id="traineeHomeTown" style="border:none;" readonly="readonly"></input>
+          </div>
       </div><!-- END OF DETAIL PAGE -->
+      <div data-role="page" data-theme="a" id="taskOverview">
+          <div class="ui-bar-a" style="height:70px;">
+              <div style="width:40%; height:15px;" class="ui-block-a">
+                  <a href="#" data-direction="reverse" class="returnToHome" data-role="button" data-icon="arrow-l">Home</a></div>
+              <div sytle="width:50%; margin-left:5px;" class="ui-block-b"><h2>Tasks</h2></div>
+          </div>
+          <div id="content" style="margin:0px 5px;">
+          </div>
+      </div><!-- END OF TASK OVERVIEW -->
   </body>
 </html>

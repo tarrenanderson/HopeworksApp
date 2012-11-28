@@ -7,11 +7,18 @@ function regLinkClickHandlers() {
                                   $j.mobile.changePage('#addContactPage',{});
                                            });
     $j('#link_list_trainee').click(function(){
-                                   forcetkClient.query("SELECT Name FROM tdev__Trainee_Summary_Record__c", onSuccessTrainees, onErrorSfdc);
+                                   forcetkClient.query("SELECT Name, tdev__Hometown__c FROM tdev__Trainee_Summary_Record__c", onSuccessTrainees, onErrorSfdc);
                                    
                                    });
+    $j('#link_task_overview').click(function(){
+                              $j.mobile.changePage('#taskOverview', {});
+                              });
+    
     $j('.returnToHome').click(function(){
-                              $j.mobile.changePage('#app-home', {});
+                              $j.mobile.changePage('#app-home', {reverse:true});
+                              });
+    $j('.returnToList').click(function(){
+                              $j.mobile.changePage('#listTrainee', {reverse:true});
                               });
     $j('#link_test_user').click(function(){
                                 var userName = $j('#inputUser').val();
@@ -25,6 +32,7 @@ function regLinkClickHandlers() {
 
 function onSuccessTrainees(response) {
     var $j = jQuery.noConflict();
+    var traineeArray = new Array();
     $j.mobile.changePage('#listTrainee',{});
     $j("#traineelist").html("")
     var ul = $j('<ul data-role="listview" data-inset="true" data-theme="a" data-dividertheme="a"></ul>');
@@ -32,11 +40,19 @@ function onSuccessTrainees(response) {
     
     ul.append($j('<li data-role="list-divider">Trainees: ' + response.totalSize + '</li>'));
     $j.each(response.records, function(i, trainee) {
-           var newLi = $j("<li><a href='#'>" + (i+1) + " - " + trainee.Name + "</a></li>");
+            traineeArray[i] = trainee;
+           var newLi = $j("<li data-id='" + i + "' class='detailLink'><a href='#'>" + (i+1) + " - " + trainee.Name + "</a></li>");
            ul.append(newLi);
            });
-    
-    $j("#traineelist").trigger( "create" )
+
+    $j("#traineelist").trigger( "create" );
+    $j(".detailLink").click(function(){
+                            var id = $j(this).attr('data-id');
+                            var record = traineeArray[id];
+                            $j("#traineeName").val(record.Name);
+                            $j("#traineeHomeTown").val(record.tdev__Hometown__c);
+                            $j.mobile.changePage('#detailpage', {changeHash: true});
+                            });
 }
 
 function onSuccessUser(user, userName)
