@@ -35,7 +35,7 @@ function regLinkClickHandlers() {
                                 var userName = $j('#inputUser').val();
                                 var userEmail = $j('#inputEmail').val();
                                 var userAlias = userName.substring(0,8);
-                                forcetkClient.create("user",{"LastName": userName, "Alias": userAlias, "Email": userEmail, "Username": userEmail, "CommunityNickname": userName, "EmailEncodingKey": "ISO-8859-1", "TimeZoneSidKey": "America/New_York", "LocaleSidKey": "en_US", "ProfileId": "00eG00000016MBF", "LanguageLocaleKey": "en_US"}, function(result){
+                                forcetkClient.create("user",{"LastName": userName, "Alias": userAlias, "Email": userEmail, "Username": userEmail, "CommunityNickname": userName, "EmailEncodingKey": "ISO-8859-1", "TimeZoneSidKey": "America/New_York", "LocaleSidKey": "en_US", "ProfileId": "00eG00000016MBP", "LanguageLocaleKey": "en_US"}, function(result){
                                             onSuccessUser(result["id"], userName)
                                                           }, onErrorSfdc);
                                 });
@@ -66,6 +66,7 @@ function onSuccessTrainees(response) {
                             });
 }
 
+//Task Functions       
 function onSuccessTasks(response)
 {
     var $j = jQuery.noConflict();
